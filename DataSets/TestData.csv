@@ -1,0 +1,9 @@
+﻿Meat-Type,Year,Sectors,UNIT,Fresh,Preserved,total
+Pork,2020,"Agriculture, forestry and fishing (01-03)",€m,10,5,15
+Venison,2020,"Agriculture, forestry and fishing (01-03) (05-43)",€m,20,40,60
+Beef,2020,"Agriculture, forestry and fishing (01-03)",€m,30,50,80
+Salmon,2020,"Agriculture, forestry and fishing (01-03)",€m,40,5,45
+Chicken,2020,"Agriculture, forestry and fishing (01-03)",€m,15,30,45
+Turkey,2020,"Agriculture, forestry and fishing (01-03)",€m,29,17,46
+Bison,2020,"Agriculture, forestry and fishing (01-03)",€m,50,20,70
+Tuna,2020,"Agriculture, forestry and fishing (01-03) and gas (35)",€m,40,20,60
