@@ -55,7 +55,7 @@ class stackChart {
 
             let dataValue = int(-data.rows[i].obj[this.yvalue])
             noStroke();
-            fill(0)
+            fill(255)
             rect(i * barunit, 0, BarChartWidth, this.scaler(dataValue))
         }
         translate(0, 0);
@@ -64,7 +64,7 @@ class stackChart {
 
             let dataValue = int(-data.rows[i].obj[this.bvalue])
             noStroke();
-            fill(255)
+            fill(0)
             rect(i * barunit, 0, BarChartWidth, this.scaler(dataValue))
         }
 
@@ -156,7 +156,7 @@ class stackChart {
         textAlign(TOP, CENTER);
         fill(0, 0, 0)
         textSize(15)
-        text(" Agricultural Fresh & Preserve Goods comparison", this.height / -10, -this.width - 120, )
+        text(" Agricultural Fresh(white) & Preserve(Black) Goods comparison with horizontal", this.height / -10, -this.width - 120, )
         pop();
     }
 }

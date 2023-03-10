@@ -9,7 +9,7 @@ class stackHori {
         _xvalue,
         _yvalue,
         _avalue,
-        _bvalue,
+        _bvalue
 
     }) {
         this.height = _height;
@@ -24,6 +24,7 @@ class stackHori {
         this.avalue = _avalue;
         this.bvalue = _bvalue;
 
+
         this.maxValue = this.CalculateMax();
         this.margin = 10;
         this.tickAmount = 5;
@@ -34,7 +35,7 @@ class stackHori {
     render() {
         push()
         translate(this.posX, this.posY)
-        this.chartTitle();
+
         this.drawBars();
         this.drawVerticalLines();
         this.drawHorizontalLines();
@@ -48,7 +49,7 @@ class stackHori {
         let barunit = barHeight + this.spacing;
 
         push()
-        translate(this.margin, 0);
+        translate(0, 0);
         for (let i = 0; i < barNumb; i++) {
 
 
@@ -58,6 +59,18 @@ class stackHori {
             rect(0, i * -barunit, -this.scaler(dataValue), -barHeight);
 
         }
+        translate(0, 0);
+        for (let i = 0; i < barNumb; i++) {
+
+
+            let dataValue = int(-data.rows[i].obj[this.bvalue])
+            noStroke();
+            fill(0);
+            rect(0, i * -barunit, -this.scaler(dataValue), -barHeight);
+
+        }
+        pop()
+
     }
 
     drawHorizontalLines() {
@@ -140,13 +153,6 @@ class stackHori {
     scaler(_num) {
         return map(_num, 0, this.maxValue, 0, this.height);
     }
-    chartTitle() {
-        push();
-        textAlign(TOP, CENTER);
-        fill(0, 0, 0)
-        textSize(30)
-        text(" Agricultural output", this.height / -8, -this.width - 130, )
-        pop();
-    }
+
 
 }
