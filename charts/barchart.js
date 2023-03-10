@@ -64,7 +64,7 @@ class Barchart {
 
 
                 let dataValue = int(-data.rows[i].obj[this.yvalue])
-                fill(17, 0, 230)
+                fill(32, 85, 117)
                 rect(i * barunit, 0, barlength, this.scaler(dataValue))
             }
 
