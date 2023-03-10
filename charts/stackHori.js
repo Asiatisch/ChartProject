@@ -1,4 +1,4 @@
-class stackHori {
+class StackHori {
     constructor({
         _height,
         _width,
@@ -25,7 +25,7 @@ class stackHori {
         this.bvalue = _bvalue;
 
 
-        this.maxValue = this.CalculateMax();
+        this.maxValue = this.calculateMax();
         this.margin = 10;
         this.tickAmount = 5;
         this.spacing = 10;
@@ -132,7 +132,7 @@ class stackHori {
     }
 
 
-    CalculateMax() {
+    calculateMax() {
         let maxNum = 0;
         for (let x = 0; x < this.data.getRowCount(); x++) {
 

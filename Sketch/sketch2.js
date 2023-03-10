@@ -27,9 +27,9 @@ function setup() {
 
     charts.push(new Horizontal({ _width: 200, _height: 300, _posX: 350, _posY: 350, _data: data, _xvalue: "Meat-Type", _yvalue: "total" }));
 
-    charts.push(new stackChart({ _width: 200, _height: 300, _posX: -300, _posY: 390, _data: data, _xvalue: "Meat-Type", _yvalue: "total", _avalue: "Fresh", _bvalue: "Preserved" }));
+    charts.push(new StackChart({ _width: 200, _height: 300, _posX: -300, _posY: 390, _data: data, _xvalue: "Meat-Type", _yvalue: "total", _avalue: "Fresh", _bvalue: "Preserved" }));
 
-    charts.push(new stackHori({ _width: 200, _height: 300, _posX: 50, _posY: 400, _data: data, _xvalue: "Meat-Type", _yvalue: "total", _avalue: "Fresh", _bvalue: "Preserved" }));
+    charts.push(new StackHori({ _width: 200, _height: 300, _posX: 50, _posY: 400, _data: data, _xvalue: "Meat-Type", _yvalue: "total", _avalue: "Fresh", _bvalue: "Preserved" }));
 
 
 

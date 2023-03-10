@@ -1,4 +1,4 @@
-class stackChart {
+class StackChart {
     constructor({
         _height,
         _width,
@@ -23,7 +23,7 @@ class stackChart {
         this.avalue = _avalue;
         this.bvalue = _bvalue;
 
-        this.maxValue = this.CalculateMax();
+        this.maxValue = this.calculateMax();
         this.margin = 10;
         this.tickAmount = 5;
         this.spacing = 10;
@@ -133,7 +133,7 @@ class stackChart {
         return map(_num, 0, this.maxValue, 0, this.height);
     }
 
-    CalculateMax() {
+    calculateMax() {
         let maxNum = 0;
         for (let x = 0; x < this.data.getRowCount(); x++) {
 

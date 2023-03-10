@@ -49,13 +49,13 @@ class Barchart {
     }
 
     //barchart---------------------------------------------------------------------------
-    // dras the shape
+    // draws the the bars of the chart
 
     drawBar() {
             let barNumber = this.data.getRowCount();
             let remainWidth = this.width - (this.margin * 2) - ((barNumber - 1) * this.spacing)
-            let barlength = remainWidth / barNumber;
-            let barunit = barlength + this.spacing;
+            let barChartWidth = remainWidth / barNumber;
+            let barunit = barChartWidth + this.spacing;
 
             push()
 
@@ -65,7 +65,7 @@ class Barchart {
 
                 let dataValue = int(-data.rows[i].obj[this.yvalue])
                 fill(32, 85, 117)
-                rect(i * barunit, 0, barlength, this.scaler(dataValue))
+                rect(i * barunit, 0, barChartWidth, this.scaler(dataValue))
             }
 
             pop()
@@ -84,8 +84,9 @@ class Barchart {
             stroke(0);
             line(0, -TopTickSpace * T, -10, -TopTickSpace * T);
 
+            //this line of code draws the numbers on the chart
             let unitSpace = (this.maxValue / this.tickAmount).toFixed(2);
-            //this line of code draws the text 
+
             noStroke();
             fill(50)
             textSize(15)
@@ -103,8 +104,8 @@ class Barchart {
 
         let barNumber = this.data.getRowCount();
         let remainWidth = this.width - (this.margin * 2) - ((barNumber - 1) * this.spacing)
-        let barlength = remainWidth / barNumber;
-        let barunit = barlength + this.spacing;
+        let barChartWidth = remainWidth / barNumber;
+        let barunit = barChartWidth + this.spacing;
         push()
         translate(this.margin, 0);
 
@@ -122,7 +123,7 @@ class Barchart {
             textSize(12)
 
 
-            translate(x * barunit + (barlength / 2), 15)
+            translate(x * barunit + (barChartWidth / 2), 15)
             rotate(45)
             text(dataValue, 0, 0)
             pop()
